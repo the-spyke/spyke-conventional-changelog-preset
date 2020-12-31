@@ -1,10 +1,6 @@
 "use strict";
 
 module.exports = {
-	coverageProvider: "v8",
-	// setupFiles: [
-	// 	`@undercut/config/jest/jest.setup.node.js`,
-	// ],
 	testEnvironment: "node",
 	testMatch: [
 		"**/*.test.*.?(c|m)js",
@@ -17,7 +13,4 @@ module.exports = {
 		"/node_modules/",
 		"\\.config\\.(c|m)?js",
 	],
-	// transform: {
-	// 	"\\.(c|m)?js$": `@undercut/config/jest/babel_jest_transformer.cjs`
-	// },
 };
