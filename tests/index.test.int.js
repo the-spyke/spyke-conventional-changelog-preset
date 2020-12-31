@@ -10,7 +10,7 @@ const gitDummyCommit = require("git-dummy-commit");
 const shell = require("shelljs");
 
 const URL = require("../package.json").repository.url;
-const getUndercutPreset = require("../src/index.js");
+const getPreset = require("../src/index.js");
 
 function setupBaseCommits() {
 	gitDummyCommit(["chore(build)!: first build setup", "BREAKING CHANGE: New build system."]);
@@ -35,7 +35,7 @@ function setupBreakingChangeCommits() {
 
 async function getChangelog(presetOptions, coreOptions) {
 	const changelogStream = conventionalChangelogCore({
-		config: getUndercutPreset(presetOptions),
+		config: getPreset(presetOptions),
 		...coreOptions
 	});
 
@@ -50,7 +50,7 @@ async function getChangelog(presetOptions, coreOptions) {
 	return changelog;
 }
 
-describe("Undercut Preset", () => {
+describe("Changelog Preset", () => {
 	const cwd = process.cwd();
 
 	let temp = null;
@@ -170,9 +170,9 @@ describe("Undercut Preset", () => {
 			issueUrlFormat: "issues://{{repository}}/issues/{{id}}",
 		});
 
-		expect(changelog).toMatch("[#1](issues://undercut/issues/1)");
+		expect(changelog).toMatch("[#1](issues://spyke-conventional-changelog-preset/issues/1)");
 		expect(changelog).toMatch("[conventional-changelog/standard-version#358](issues://standard-version/issues/358)");
-		expect(changelog).toMatch("[GH-1](issues://undercut/issues/1)");
+		expect(changelog).toMatch("[GH-1](issues://spyke-conventional-changelog-preset/issues/1)");
 	});
 
 	test("should properly format issues in external issue tracker given an 'issueUrlFormat' with a 'prefix'", async () => {
