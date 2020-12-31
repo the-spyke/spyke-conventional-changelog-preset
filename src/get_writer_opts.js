@@ -12,15 +12,23 @@ const owner = "{{#if this.owner}}{{this.owner}}{{else}}{{@root.owner}}{{/if}}";
 const host = "{{@root.host}}";
 const repository = "{{#if this.repository}}{{this.repository}}{{else}}{{@root.repository}}{{/if}}";
 const sections = {
-	NewFeature: ":rocket: New Feature",
 	BugFix: ":bug: Bug Fix",
-	Polish: ":nail_care: Polish",
 	Documentation: ":memo: Documentation",
 	Internal: ":house: Internal",
+	NewFeature: ":rocket: New Feature",
 	Performance: ":running_woman: Performance",
+	Polish: ":nail_care: Polish",
 	Revert: ":leftwards_arrow_with_hook: Revert",
 };
-const sectionsOrder = new Map(Object.keys(sections).map((k, i) => [sections[k], i]));
+const sectionsOrder = new Map([
+	sections.NewFeature,
+	sections.BugFix,
+	sections.Polish,
+	sections.Documentation,
+	sections.Internal,
+	sections.Performance,
+	sections.Revert,
+].map((s, i) => [s, i]));
 
 module.exports = async function getWriterOpts(config) {
 	config = defaultConfig(config);
