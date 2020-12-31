@@ -163,8 +163,8 @@ function defaultConfig(config) {
 }
 
 function commitGroupsSort(groupA, groupB) {
-	const rankA = sectionsOrder.get(groupA.title) ?? 1000;
-	const rankB = sectionsOrder.get(groupB.title) ?? 1000;
+	const rankA = sectionsOrder.has(groupA.title) ? sectionsOrder.get(groupA.title) : 1000;
+	const rankB = sectionsOrder.has(groupB.title) ? sectionsOrder.get(groupB.title) : 1000;
 
 	return rankA - rankB;
 }
