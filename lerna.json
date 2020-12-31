@@ -9,6 +9,8 @@
 				"**/__snapshots__/",
 				"**/*.test.*.?(c|m)js",
 				"**/*.test.?(c|m)js",
+				"*.config.?(c|m)js",
+				"*.json",
 				"*.md?(x)"
 			]
 		}
