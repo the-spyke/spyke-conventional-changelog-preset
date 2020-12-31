@@ -1,6 +1,6 @@
 # @spyke/conventional-changelog-preset
 
-A preset for [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog) and [Lerna](https://github.com/lerna/lerna/) making output similar to [Babel's changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md) with emojies, similar categories and sorting.
+A preset for [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog) and [Lerna](https://github.com/lerna/lerna/) making output similar to [Babel's changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md) with emojis, fancy categories and sorting.
 
 [Example output](https://github.com/the-spyke/undercut/blob/master/CHANGELOG.md).
 
