@@ -1,0 +1,21 @@
+{
+	"changelogPreset": ".",
+	"command": {
+		"publish": {
+			"message": "chore(release): %s"
+		},
+		"version": {
+			"ignoreChanges": [
+				"**/__snapshots__/",
+				"**/*.test.*.?(c|m)js",
+				"**/*.test.?(c|m)js",
+				"*.md?(x)"
+			]
+		}
+	},
+	"npmClient": "yarn",
+	"packages": [
+		"."
+	],
+	"version": "1.0.1"
+}
