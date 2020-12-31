@@ -1,5 +1,6 @@
 "use strict";
 
+const { writeFileSync } = require("fs");
 const path = require("path");
 
 const { afterEach, beforeEach, describe, expect, test } = require("@jest/globals");
@@ -8,6 +9,11 @@ const { dirSync } = require("tmp");
 
 const gitDummyCommit = require("git-dummy-commit");
 const shell = require("shelljs");
+
+const pkgJson = JSON.stringify({
+	...require("../package.json"),
+	version: "1.0.0",
+});
 
 const URL = require("../package.json").repository.url;
 const getPreset = require("../src/index.js");
@@ -60,7 +66,7 @@ describe("Changelog Preset", () => {
 
 		shell.config.resetForTesting();
 		shell.cd(temp.name);
-		shell.cp(require.resolve("../package.json"), temp.name);
+		writeFileSync(path.join(temp.name, "package.json"), pkgJson);
 		shell.mkdir("git-templates");
 		shell.exec("git init --template=./git-templates");
 		shell.exec("git config user.email \"bot@example.com\"");
