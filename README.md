@@ -1,5 +1,9 @@
 # @spyke/conventional-changelog-preset
 
+[![downloads](https://img.shields.io/npm/dm/@spyke/conventional-changelog-preset)](https://www.npmjs.com/package/@spyke/conventional-changelog-preset)
+[![CI](https://github.com/the-spyke/spyke-conventional-changelog-preset/workflows/CI/badge.svg)](https://github.com/the-spyke/spyke-conventional-changelog-preset/actions?query=workflow%3ACI)
+[![license](https://img.shields.io/npm/l/undercut.svg)](https://github.com/the-spyke/undercut/blob/master/LICENSE)
+
 A preset for [Conventional Changelog](https://github.com/conventional-changelog/conventional-changelog) and [Lerna](https://github.com/lerna/lerna/) making output similar to [Babel's changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md) with emojis, fancy categories and sorting.
 
 [Example output](https://github.com/the-spyke/undercut/blob/master/CHANGELOG.md).
