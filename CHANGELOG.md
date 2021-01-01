@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [v1.0.3](https://github.com/the-spyke/spyke-conventional-changelog-preset/compare/v1.0.2...v1.0.3) (2021-01-01)
+
+### :house: Internal
+
+* **deps:** Remove peer dependency on cc-core ([af5dc8f](https://github.com/the-spyke/spyke-conventional-changelog-preset/commit/af5dc8febf4041df356571f3625650570312c0db))
+
 ## [v1.0.2](https://github.com/the-spyke/spyke-conventional-changelog-preset/compare/v1.0.1...v1.0.2) (2020-12-31)
 
 ### :bug: Bug Fix

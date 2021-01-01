@@ -10,8 +10,8 @@
 				"**/*.test.*.?(c|m)js",
 				"**/*.test.?(c|m)js",
 				"*.config.?(c|m)js",
-				"*.json",
-				"*.md?(x)"
+				"*.md?(x)",
+				".*.json"
 			]
 		}
 	},
@@ -19,5 +19,5 @@
 	"packages": [
 		"."
 	],
-	"version": "1.0.2"
+	"version": "1.0.3"
 }
