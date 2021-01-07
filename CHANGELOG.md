@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [v1.0.4](https://github.com/the-spyke/spyke-conventional-changelog-preset/compare/v1.0.3...v1.0.4) (2021-01-07)
+
+### :bug: Bug Fix
+
+* Add compatibility with Q.nfcall ([65ffb14](https://github.com/the-spyke/spyke-conventional-changelog-preset/commit/65ffb14d7b021c4859e09cfec8becd470a3a8efa))
+
+### :memo: Documentation
+
+* Add readme badges [skip ci] ([0a699d6](https://github.com/the-spyke/spyke-conventional-changelog-preset/commit/0a699d6e751ffc79b4ab202fd6c63a6c9ef4a7dc))
+
 ## [v1.0.3](https://github.com/the-spyke/spyke-conventional-changelog-preset/compare/v1.0.2...v1.0.3) (2021-01-01)
 
 ### :house: Internal
