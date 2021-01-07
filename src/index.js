@@ -6,12 +6,10 @@ const getRecommendedBumpOpts = require("./get_recommended_bump_opts.js");
 
 // No async function here because Lerna has buggy detection in resolveConfigPromise().
 module.exports = function getChangelogPreset(config = {}) {
-	let finalizer = result => result;
+	const callback = config;
+	const isCallback = typeof config === "function";
 
-	if (typeof config === "function") {
-		const cb = config;
-
-		finalizer = result => cb(undefined, result);
+	if (isCallback) {
 		config = {};
 	} else if (typeof config !== "object") {
 		throw new Error("Invalid config parameter type in preset factory.");
@@ -20,10 +18,16 @@ module.exports = function getChangelogPreset(config = {}) {
 	const parserOpts = getParserOpts(config);
 	const recommendedBumpOpts = getRecommendedBumpOpts(config);
 
-	return getWriterOpts(config).then(writerOpts => ({
+	const preset = getWriterOpts(config).then(writerOpts => ({
 		conventionalChangelog: { parserOpts, writerOpts },
 		parserOpts,
 		recommendedBumpOpts,
 		writerOpts,
-	})).then(finalizer);
+	}));
+
+	if (isCallback) {
+		preset.then(r => callback(undefined, r)).catch(e => callback(e));
+	}
+
+	return preset;
 };
