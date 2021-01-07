@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [v1.0.5](https://github.com/the-spyke/spyke-conventional-changelog-preset/compare/v1.0.4...v1.0.5) (2021-01-07)
+
+### :bug: Bug Fix
+
+* Pass errors to Q.nfcall ([74e14a4](https://github.com/the-spyke/spyke-conventional-changelog-preset/commit/74e14a4fa4f477852a1f25524f12fb7a8b3ba14f))
+
 ## [v1.0.4](https://github.com/the-spyke/spyke-conventional-changelog-preset/compare/v1.0.3...v1.0.4) (2021-01-07)
 
 ### :bug: Bug Fix

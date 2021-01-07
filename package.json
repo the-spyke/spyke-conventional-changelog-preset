@@ -1,6 +1,6 @@
 {
   "name": "@spyke/conventional-changelog-preset",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A preset for Conventional Changelog making output similar to Babel's changelog with emojis, fancy categories and sorting.",
   "author": "Anton Alexandrenok",
   "license": "MIT",
